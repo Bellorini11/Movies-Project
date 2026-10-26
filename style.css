@@ -223,7 +223,7 @@ main {
 .movie-card__poster-placeholder {
   width: 100%;
   aspect-ratio: 2 / 3;
-  background: linear-gradient(145deg, #333, #222, #333);
+  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -240,6 +240,25 @@ main {
 
 .movie-card__poster-placeholder:hover {
   box-shadow: 1px 8px 24px rgb(0, 0, 0, 0.5);
+}
+
+/* Spinner Loading */
+.spinner {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 48px;
+  height: 48px;
+  margin: 40px 0;
+  border: 5px solid #ddd;
+  border-top-color: #00b5e7;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Skeleton Loading */
